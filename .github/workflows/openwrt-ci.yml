@@ -73,7 +73,6 @@ jobs:
           # 例如:
 
           cat >> .config <<EOF
-          
           CONFIG_MODULES=y
           CONFIG_HAVE_DOT_CONFIG=y
           CONFIG_TARGET_x86=y
@@ -211,8 +210,7 @@ jobs:
           CONFIG_USES_ROOTFS_PART=y
           CONFIG_USES_BOOT_PART=y
           CONFIG_x86_64=y
-          CONFIG_ARCH="x86_64"
-          CONFIG_EXTERNAL_CPIO=""
+          CONFIG_ARCH="x86_64"CONFIG_EXTERNAL_CPIO=""
           CONFIG_TARGET_ROOTFS_SQUASHFS=y
           CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
           CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
@@ -225,15 +223,11 @@ jobs:
           CONFIG_GRUB_BOOTOPTS=""
           CONFIG_GRUB_TIMEOUT="0"
           CONFIG_GRUB_TITLE="OpenWrt"
-          CONFIG_VMDK_IMAGES=y
-          CONFIG_TARGET_KERNEL_PARTSIZE=16
+          CONFIG_VMDK_IMAGES=yCONFIG_TARGET_KERNEL_PARTSIZE=16
           CONFIG_TARGET_ROOTFS_PARTSIZE=160
-          CONFIG_TARGET_ROOTFS_PARTNAME=""
-          CONFIG_SIGNED_PACKAGES=y
-          CONFIG_SIGNATURE_CHECK=y
-          CONFIG_DISPLAY_SUPPORT=y
-          CONFIG_SHADOW_PASSWORDS=y
-          CONFIG_KERNEL_BUILD_USER=""
+          CONFIG_TARGET_ROOTFS_PARTNAME=""CONFIG_SIGNED_PACKAGES=y
+          CONFIG_SIGNATURE_CHECK=yCONFIG_DISPLAY_SUPPORT=y
+          CONFIG_SHADOW_PASSWORDS=yCONFIG_KERNEL_BUILD_USER=""
           CONFIG_KERNEL_BUILD_DOMAIN=""
           CONFIG_KERNEL_PRINTK=y
           CONFIG_KERNEL_SWAP=y
@@ -285,18 +279,14 @@ jobs:
           CONFIG_KERNEL_IPV6_SUBTREES=y
           CONFIG_KERNEL_IPV6_MROUTE=y
           CONFIG_KERNEL_SQUASHFS_FRAGMENT_CACHE_SIZE=3
-          CONFIG_KERNEL_CC_OPTIMIZE_FOR_PERFORMANCE=y
-          CONFIG_IPV6=y
-          CONFIG_USE_SSTRIP=y
-          CONFIG_USE_UCLIBCXX=y
-          CONFIG_PKG_CHECK_FORMAT_SECURITY=y
+          CONFIG_KERNEL_CC_OPTIMIZE_FOR_PERFORMANCE=yCONFIG_IPV6=yCONFIG_USE_SSTRIP=y
+          CONFIG_USE_UCLIBCXX=yCONFIG_PKG_CHECK_FORMAT_SECURITY=y
           CONFIG_PKG_ASLR_PIE_REGULAR=y
           CONFIG_PKG_CC_STACKPROTECTOR_REGULAR=y
           CONFIG_KERNEL_CC_STACKPROTECTOR_REGULAR=y
           CONFIG_KERNEL_STACKPROTECTOR=y
           CONFIG_PKG_FORTIFY_SOURCE_1=y
-          CONFIG_PKG_RELRO_FULL=y
-          CONFIG_BINARY_FOLDER=""
+          CONFIG_PKG_RELRO_FULL=yCONFIG_BINARY_FOLDER=""
           CONFIG_DOWNLOAD_FOLDER=""
           CONFIG_LOCALMIRROR=""
           CONFIG_AUTOREBUILD=y
@@ -334,9 +324,7 @@ jobs:
           CONFIG_FEED_routing=y
           CONFIG_FEED_telephony=y
           CONFIG_FEED_freifunk=y
-          CONFIG_FEED_helloworld=y
-          CONFIG_FEED_liuran001_packages=y
-          CONFIG_PACKAGE_base-files=y
+          CONFIG_FEED_helloworld=yCONFIG_PACKAGE_base-files=y
           CONFIG_PACKAGE_block-mount=y
           CONFIG_PACKAGE_busybox=y
           CONFIG_BUSYBOX_DEFAULT_HAVE_DOT_CONFIG=y
@@ -645,11 +633,9 @@ jobs:
           CONFIG_PACKAGE_dnsmasq_full_dhcp=y
           CONFIG_PACKAGE_dnsmasq_full_ipset=y
           CONFIG_PACKAGE_dnsmasq_full_tftp=y
-          CONFIG_PACKAGE_dropbear=y
-          CONFIG_DROPBEAR_CURVE25519=y
+          CONFIG_PACKAGE_dropbear=yCONFIG_DROPBEAR_CURVE25519=y
           CONFIG_DROPBEAR_CHACHA20POLY1305=y
-          CONFIG_DROPBEAR_DBCLIENT=y
-          CONFIG_PACKAGE_firewall=y
+          CONFIG_DROPBEAR_DBCLIENT=yCONFIG_PACKAGE_firewall=y
           CONFIG_PACKAGE_fstools=y
           CONFIG_PACKAGE_fwtool=y
           CONFIG_PACKAGE_getrandom=y
@@ -663,6 +649,7 @@ jobs:
           CONFIG_PACKAGE_logd=y
           CONFIG_PACKAGE_mtd=y
           CONFIG_PACKAGE_netifd=y
+          CONFIG_PACKAGE_nft-qos=y
           CONFIG_PACKAGE_openwrt-keyring=y
           CONFIG_PACKAGE_opkg=y
           CONFIG_PACKAGE_procd=y
@@ -675,15 +662,12 @@ jobs:
           CONFIG_PACKAGE_urandom-seed=y
           CONFIG_PACKAGE_urngd=y
           CONFIG_PACKAGE_usign=y
-          CONFIG_ZABBIX_NOSSL=y
-          CONFIG_ZABBIX_POSTGRESQL=y
-          CONFIG_PACKAGE_htop=y
-          CONFIG_PACKAGE_grub2=y
+          CONFIG_ZABBIX_NOSSL=yCONFIG_ZABBIX_POSTGRESQL=yCONFIG_PACKAGE_htop=yCONFIG_PACKAGE_grub2=y
           CONFIG_PACKAGE_grub2-efi=y
           CONFIG_PACKAGE_autocore-x86=y
           CONFIG_PACKAGE_automount=y
           CONFIG_PACKAGE_autosamba=y
-          CONFIG_PACKAGE_amdgpu-firmware=y
+          CONFIG_PACKAGE_wireguard-tools=yCONFIG_PACKAGE_amdgpu-firmware=y
           CONFIG_PACKAGE_ath10k-board-qca9888=y
           CONFIG_PACKAGE_ath10k-board-qca988x=y
           CONFIG_PACKAGE_ath10k-board-qca9984=y
@@ -695,6 +679,8 @@ jobs:
           CONFIG_PACKAGE_brcmfmac-firmware-43602a1-pcie=y
           CONFIG_PACKAGE_rt2800-usb-firmware=y
           CONFIG_PACKAGE_wireless-regdb=y
+          CONFIG_PACKAGE_kmod-dax=y
+          CONFIG_PACKAGE_kmod-dm=y
           CONFIG_PACKAGE_kmod-scsi-core=y
           CONFIG_PACKAGE_kmod-crypto-acompress=y
           CONFIG_PACKAGE_kmod-crypto-aead=y
@@ -715,14 +701,13 @@ jobs:
           CONFIG_PACKAGE_kmod-crypto-pcompress=y
           CONFIG_PACKAGE_kmod-crypto-sha1=y
           CONFIG_PACKAGE_kmod-crypto-user=y
-          CONFIG_PACKAGE_kmod-cryptodev=y
-          CONFIG_PACKAGE_kmod-fs-antfs=y
+          CONFIG_PACKAGE_kmod-cryptodev=yCONFIG_PACKAGE_kmod-fs-antfs=y
+          CONFIG_PACKAGE_kmod-fs-btrfs=y
           CONFIG_PACKAGE_kmod-fs-exfat=y
           CONFIG_PACKAGE_kmod-fs-ext4=y
           CONFIG_PACKAGE_kmod-fs-f2fs=y
           CONFIG_PACKAGE_kmod-fs-vfat=y
-          CONFIG_PACKAGE_kmod-hwmon-core=y
-          CONFIG_PACKAGE_kmod-i2c-algo-bit=y
+          CONFIG_PACKAGE_kmod-hwmon-core=yCONFIG_PACKAGE_kmod-i2c-algo-bit=y
           CONFIG_PACKAGE_kmod-i2c-core=y
           CONFIG_PACKAGE_kmod-hid=y
           CONFIG_PACKAGE_kmod-hid-generic=y
@@ -732,18 +717,25 @@ jobs:
           CONFIG_PACKAGE_kmod-lib-crc-ccitt=y
           CONFIG_PACKAGE_kmod-lib-crc-itu-t=y
           CONFIG_PACKAGE_kmod-lib-crc16=y
+          CONFIG_PACKAGE_kmod-lib-crc32c=y
           CONFIG_PACKAGE_kmod-lib-crc7=y
+          CONFIG_PACKAGE_kmod-lib-lzo=y
+          CONFIG_PACKAGE_kmod-lib-raid6=y
           CONFIG_PACKAGE_kmod-lib-textsearch=y
+          CONFIG_PACKAGE_kmod-lib-xor=y
           CONFIG_PACKAGE_kmod-lib-zlib-deflate=y
           CONFIG_PACKAGE_kmod-lib-zlib-inflate=y
-          CONFIG_PACKAGE_kmod-nls-base=y
+          CONFIG_PACKAGE_kmod-lib-zstd=yCONFIG_PACKAGE_kmod-nls-base=y
           CONFIG_PACKAGE_kmod-nls-cp437=y
           CONFIG_PACKAGE_kmod-nls-iso8859-1=y
-          CONFIG_PACKAGE_kmod-nls-utf8=y
+          CONFIG_PACKAGE_kmod-nls-utf8=yCONFIG_PACKAGE_kmod-br-netfilter=y
           CONFIG_PACKAGE_kmod-ip6tables=y
           CONFIG_PACKAGE_kmod-ipt-conntrack=y
+          CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
           CONFIG_PACKAGE_kmod-ipt-core=y
+          CONFIG_PACKAGE_kmod-ipt-extra=y
           CONFIG_PACKAGE_kmod-ipt-fullconenat=y
+          CONFIG_PACKAGE_kmod-ipt-ipopt=y
           CONFIG_PACKAGE_kmod-ipt-ipsec=y
           CONFIG_PACKAGE_kmod-ipt-ipset=y
           CONFIG_PACKAGE_kmod-ipt-nat=y
@@ -754,13 +746,16 @@ jobs:
           CONFIG_PACKAGE_kmod-nf-conntrack6=y
           CONFIG_PACKAGE_kmod-nf-ipt=y
           CONFIG_PACKAGE_kmod-nf-ipt6=y
+          CONFIG_PACKAGE_kmod-nf-ipvs=y
           CONFIG_PACKAGE_kmod-nf-nat=y
           CONFIG_PACKAGE_kmod-nf-nathelper=y
           CONFIG_PACKAGE_kmod-nf-nathelper-extra=y
           CONFIG_PACKAGE_kmod-nf-reject=y
           CONFIG_PACKAGE_kmod-nf-reject6=y
           CONFIG_PACKAGE_kmod-nfnetlink=y
-          CONFIG_PACKAGE_kmod-8139cp=y
+          CONFIG_PACKAGE_kmod-nft-bridge=y
+          CONFIG_PACKAGE_kmod-nft-core=y
+          CONFIG_PACKAGE_kmod-nft-netdev=yCONFIG_PACKAGE_kmod-8139cp=y
           CONFIG_PACKAGE_kmod-8139too=y
           CONFIG_PACKAGE_kmod-bnx2=y
           CONFIG_PACKAGE_kmod-e1000=y
@@ -780,8 +775,7 @@ jobs:
           CONFIG_PACKAGE_kmod-r8125=y
           CONFIG_PACKAGE_kmod-r8168=y
           CONFIG_PACKAGE_kmod-tulip=y
-          CONFIG_PACKAGE_kmod-vmxnet3=y
-          CONFIG_PACKAGE_kmod-bonding=y
+          CONFIG_PACKAGE_kmod-vmxnet3=yCONFIG_PACKAGE_kmod-bonding=y
           CONFIG_PACKAGE_kmod-fast-classifier=y
           CONFIG_PACKAGE_kmod-ipsec=y
           CONFIG_PACKAGE_kmod-ipsec4=y
@@ -797,7 +791,11 @@ jobs:
           CONFIG_PACKAGE_kmod-slhc=y
           CONFIG_PACKAGE_kmod-tcp-bbr=y
           CONFIG_PACKAGE_kmod-tun=y
-          CONFIG_PACKAGE_kmod-dma-buf=y
+          CONFIG_PACKAGE_kmod-udptunnel4=y
+          CONFIG_PACKAGE_kmod-udptunnel6=y
+          CONFIG_PACKAGE_kmod-veth=y
+          CONFIG_PACKAGE_kmod-wireguard=yCONFIG_PACKAGE_kmod-dma-buf=y
+          CONFIG_PACKAGE_kmod-ikconfig=y
           CONFIG_PACKAGE_kmod-mmc=y
           CONFIG_PACKAGE_kmod-pps=y
           CONFIG_PACKAGE_kmod-ptp=y
@@ -811,10 +809,10 @@ jobs:
           CONFIG_PACKAGE_kmod-usb-net-asix-ax88179=y
           CONFIG_PACKAGE_kmod-usb-net-rtl8150=y
           CONFIG_PACKAGE_kmod-usb-net-rtl8152=y
+          CONFIG_PACKAGE_kmod-usb-printer=y
           CONFIG_PACKAGE_kmod-usb-storage=y
           CONFIG_PACKAGE_kmod-usb-storage-extras=y
-          CONFIG_PACKAGE_kmod-usb-storage-uas=y
-          CONFIG_PACKAGE_kmod-backlight=y
+          CONFIG_PACKAGE_kmod-usb-storage-uas=yCONFIG_PACKAGE_kmod-backlight=y
           CONFIG_PACKAGE_kmod-drm=y
           CONFIG_PACKAGE_kmod-drm-amdgpu=y
           CONFIG_PACKAGE_kmod-drm-kms-helper=y
@@ -824,8 +822,7 @@ jobs:
           CONFIG_PACKAGE_kmod-fb-cfb-fillrect=y
           CONFIG_PACKAGE_kmod-fb-cfb-imgblt=y
           CONFIG_PACKAGE_kmod-fb-sys-fops=y
-          CONFIG_PACKAGE_kmod-fb-sys-ram=y
-          CONFIG_PACKAGE_kmod-ath=y
+          CONFIG_PACKAGE_kmod-fb-sys-ram=yCONFIG_PACKAGE_kmod-ath=y
           CONFIG_ATH_USER_REGD=y
           CONFIG_PACKAGE_ATH_DFS=y
           CONFIG_PACKAGE_kmod-ath10k=y
@@ -847,24 +844,44 @@ jobs:
           CONFIG_GOLANG_BUILD_CACHE_DIR=""
           CONFIG_PACKAGE_libiwinfo-lua=y
           CONFIG_PACKAGE_lua=y
-          CONFIG_PACKAGE_luci-lib-fs=y
-          CONFIG_PACKAGE_node=y
-          CONFIG_NODEJS_ICU_NONE=y
-          CONFIG_PACKAGE_libsysfs=y
-          CONFIG_PACKAGE_libip4tc=y
+          CONFIG_PACKAGE_luci-lib-fs=yCONFIG_PACKAGE_node=y
+          CONFIG_NODEJS_ICU_NONE=yCONFIG_PACKAGE_php7=y
+          CONFIG_PACKAGE_php7-fpm=y
+          CONFIG_PACKAGE_php7-mod-curl=y
+          CONFIG_PACKAGE_php7-mod-gd=y
+          CONFIG_PACKAGE_php7-mod-iconv=y
+          CONFIG_PACKAGE_php7-mod-json=y
+          CONFIG_PACKAGE_php7-mod-mbstring=y
+          CONFIG_PACKAGE_php7-mod-mysqlnd=y
+          CONFIG_PACKAGE_php7-mod-opcache=y
+          CONFIG_PACKAGE_php7-mod-pdo=y
+          CONFIG_PACKAGE_php7-mod-pdo-mysql=y
+          CONFIG_PACKAGE_php7-mod-pdo-sqlite=y
+          CONFIG_PACKAGE_php7-mod-session=y
+          CONFIG_PACKAGE_php7-mod-sqlite3=y
+          CONFIG_PACKAGE_php7-mod-zip=yCONFIG_PACKAGE_libzip-gnutls=yCONFIG_PACKAGE_libsqlite3=yCONFIG_SQLITE3_DYNAMIC_EXTENSIONS=y
+          CONFIG_SQLITE3_FTS3=y
+          CONFIG_SQLITE3_FTS4=y
+          CONFIG_SQLITE3_FTS5=y
+          CONFIG_SQLITE3_JSON1=y
+          CONFIG_SQLITE3_RTREE=y
+          CONFIG_PACKAGE_libattr=y
+          CONFIG_PACKAGE_libsysfs=yCONFIG_PACKAGE_libip4tc=y
           CONFIG_PACKAGE_libip6tc=y
-          CONFIG_PACKAGE_libxtables=y
-          CONFIG_PACKAGE_libmbedtls=y
-          CONFIG_PACKAGE_libopenssl=y
-          CONFIG_OPENSSL_OPTIMIZE_SPEED=y
+          CONFIG_PACKAGE_libxtables=yCONFIG_PACKAGE_libgnutls=yCONFIG_GNUTLS_DTLS_SRTP=y
+          CONFIG_GNUTLS_ALPN=y
+          CONFIG_GNUTLS_OCSP=y
+          CONFIG_GNUTLS_HEARTBEAT=y
+          CONFIG_GNUTLS_PSK=y
+          CONFIG_GNUTLS_ANON=yCONFIG_PACKAGE_libmbedtls=y
+          CONFIG_PACKAGE_libnss=y
+          CONFIG_PACKAGE_libopenssl=yCONFIG_OPENSSL_OPTIMIZE_SPEED=y
           CONFIG_OPENSSL_WITH_ASM=y
           CONFIG_OPENSSL_WITH_SSE2=y
           CONFIG_OPENSSL_WITH_DEPRECATED=y
-          CONFIG_OPENSSL_WITH_ERROR_MESSAGES=y
-          CONFIG_OPENSSL_WITH_TLS13=y
+          CONFIG_OPENSSL_WITH_ERROR_MESSAGES=yCONFIG_OPENSSL_WITH_TLS13=y
           CONFIG_OPENSSL_WITH_SRP=y
-          CONFIG_OPENSSL_WITH_CMS=y
-          CONFIG_OPENSSL_WITH_CHACHA_POLY1305=y
+          CONFIG_OPENSSL_WITH_CMS=yCONFIG_OPENSSL_WITH_CHACHA_POLY1305=y
           CONFIG_OPENSSL_WITH_PSK=y
           CONFIG_OPENSSL_ENGINE=y
           CONFIG_OPENSSL_ENGINE_BUILTIN=y
@@ -878,19 +895,16 @@ jobs:
           CONFIG_boost-variant-release=y
           CONFIG_PACKAGE_boost-date_time=y
           CONFIG_PACKAGE_boost-program_options=y
-          CONFIG_PACKAGE_boost-system=y
-          CONFIG_PACKAGE_libblkid=y
+          CONFIG_PACKAGE_boost-system=yCONFIG_PACKAGE_libblkid=y
           CONFIG_PACKAGE_libblobmsg-json=y
           CONFIG_PACKAGE_libcares=y
           CONFIG_PACKAGE_libcomerr=y
-          CONFIG_PACKAGE_libcurl=y
-          CONFIG_LIBCURL_MBEDTLS=y
-          CONFIG_LIBCURL_FILE=y
+          CONFIG_PACKAGE_libcurl=yCONFIG_LIBCURL_MBEDTLS=yCONFIG_LIBCURL_FILE=y
           CONFIG_LIBCURL_FTP=y
           CONFIG_LIBCURL_HTTP=y
           CONFIG_LIBCURL_COOKIES=y
-          CONFIG_LIBCURL_NO_SMB="!"
-          CONFIG_LIBCURL_PROXY=y
+          CONFIG_LIBCURL_NO_SMB="!"CONFIG_LIBCURL_PROXY=y
+          CONFIG_PACKAGE_libdevmapper=y
           CONFIG_PACKAGE_libelf=y
           CONFIG_PACKAGE_libev=y
           CONFIG_PACKAGE_libevent2=y
@@ -898,25 +912,34 @@ jobs:
           CONFIG_PACKAGE_libf2fs=y
           CONFIG_PACKAGE_libfdisk=y
           CONFIG_FFMPEG_X86ASM=y
+          CONFIG_PACKAGE_libfreetype=y
+          CONFIG_PACKAGE_libgd-full=y
           CONFIG_PACKAGE_libgmp=y
           CONFIG_PACKAGE_libhttp-parser=y
           CONFIG_PACKAGE_libiwinfo=y
+          CONFIG_PACKAGE_libjpeg-turbo=y
           CONFIG_PACKAGE_libjson-c=y
           CONFIG_PACKAGE_liblua=y
+          CONFIG_PACKAGE_liblzo=y
           CONFIG_PACKAGE_libminiupnpc=y
           CONFIG_PACKAGE_libmnl=y
+          CONFIG_PACKAGE_libmount=y
           CONFIG_PACKAGE_libnatpmp=y
           CONFIG_PACKAGE_libncurses=y
+          CONFIG_PACKAGE_libnettle=y
+          CONFIG_PACKAGE_libnftnl=y
           CONFIG_PACKAGE_libnghttp2=y
           CONFIG_PACKAGE_libnl-tiny=y
           CONFIG_PACKAGE_libpcre=y
           CONFIG_PCRE_JIT_ENABLED=y
+          CONFIG_PACKAGE_libpcre2=y
+          CONFIG_PCRE2_JIT_ENABLED=y
+          CONFIG_PACKAGE_libpng=y
           CONFIG_PACKAGE_libreadline=y
           CONFIG_PACKAGE_libsensors=y
           CONFIG_PACKAGE_libsmartcols=y
-          CONFIG_PACKAGE_libsodium=y
-          CONFIG_LIBSODIUM_MINIMAL=y
-          CONFIG_PACKAGE_libss=y
+          CONFIG_PACKAGE_libsodium=yCONFIG_LIBSODIUM_MINIMAL=yCONFIG_PACKAGE_libss=y
+          CONFIG_PACKAGE_libtiff=y
           CONFIG_PACKAGE_libubox=y
           CONFIG_PACKAGE_libubus=y
           CONFIG_PACKAGE_libubus-lua=y
@@ -926,25 +949,27 @@ jobs:
           CONFIG_PACKAGE_libustream-openssl=y
           CONFIG_PACKAGE_libuuid=y
           CONFIG_PACKAGE_libuv=y
+          CONFIG_PACKAGE_libwebp=y
+          CONFIG_PACKAGE_nspr=y
+          CONFIG_PACKAGE_oniguruma=y
           CONFIG_PACKAGE_rpcd-mod-rrdns=y
           CONFIG_PACKAGE_terminfo=y
-          CONFIG_PACKAGE_zlib=y
-          CONFIG_PACKAGE_luci=y
-          CONFIG_PACKAGE_luci-base=y
-          CONFIG_LUCI_LANG_zh-cn=y
-          CONFIG_PACKAGE_luci-compat=y
-          CONFIG_PACKAGE_luci-mod-admin-full=y
-          CONFIG_PACKAGE_luci-app-accesscontrol=y
+          CONFIG_PACKAGE_zlib=yCONFIG_PACKAGE_luci=yCONFIG_PACKAGE_luci-base=yCONFIG_LUCI_LANG_zh-cn=yCONFIG_PACKAGE_luci-compat=y
+          CONFIG_PACKAGE_luci-mod-admin-full=yCONFIG_PACKAGE_luci-app-accesscontrol=y
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-arpbind=y
           CONFIG_PACKAGE_luci-app-autoreboot=y
           CONFIG_PACKAGE_luci-app-ddns=y
+          CONFIG_PACKAGE_luci-app-docker=y
           CONFIG_PACKAGE_luci-app-filetransfer=y
           CONFIG_PACKAGE_luci-app-firewall=y
+          CONFIG_PACKAGE_luci-app-frps=y
           CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
-          CONFIG_PACKAGE_luci-app-jd-dailybonus=y
+          CONFIG_PACKAGE_luci-app-kodexplorer=y
+          CONFIG_PACKAGE_luci-app-mwan3=y
+          CONFIG_PACKAGE_luci-app-mwan3helper=y
+          CONFIG_PACKAGE_luci-app-nft-qos=y
           CONFIG_PACKAGE_luci-app-nlbwmon=y
-          CONFIG_PACKAGE_luci-app-passwall-plus=y
           CONFIG_PACKAGE_luci-app-ramfree=y
           CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui=y
           CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng=y
@@ -956,64 +981,28 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+          CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
           CONFIG_PACKAGE_luci-app-unblockmusic=y
           CONFIG_UnblockNeteaseMusic_Go=y
           CONFIG_UnblockNeteaseMusic_NodeJS=y
           CONFIG_PACKAGE_luci-app-upnp=y
+          CONFIG_PACKAGE_luci-app-usb-printer=y
           CONFIG_PACKAGE_luci-app-vlmcsd=y
           CONFIG_PACKAGE_luci-app-vsftpd=y
-          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_V2ray_plugin=y
-          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_V2ray=y
-          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan=y
-          CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Server=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_Shadowsocks=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_V2ray=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_Trojan=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_Kcptun=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_ShadowsocksR_Server=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_Shadowsocks_Server=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_ShadowsocksR_Socks=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_Shadowsocks_Socks=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_ipt2socks=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_dnscrypt_proxy=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_dnsforwarder=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_ChinaDNS=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_privoxy=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_simple-obfs=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_simple-obfs-server=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_udpspeeder=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_udp2raw-tunnel=y
-          CONFIG_PACKAGE_luci-app-vssr-plus_INCLUDE_v2ray-plugin=y
           CONFIG_PACKAGE_luci-app-webadmin=y
+          CONFIG_PACKAGE_luci-app-wireguard=y
           CONFIG_PACKAGE_luci-app-wol=y
           CONFIG_PACKAGE_luci-app-xlnetacc=y
-          CONFIG_PACKAGE_luci-app-zerotier=y
-          CONFIG_PACKAGE_luci-theme-Butterfly=y
-          CONFIG_PACKAGE_luci-theme-Butterfly-dark=y
-          CONFIG_PACKAGE_luci-theme-argon=y
-          CONFIG_PACKAGE_luci-theme-argon-lr=y
-          CONFIG_PACKAGE_luci-theme-argon-mc=y
-          CONFIG_PACKAGE_luci-theme-argon-mod=y
-          CONFIG_PACKAGE_luci-theme-argon_new=y
-          CONFIG_PACKAGE_luci-theme-argonv2=y
-          CONFIG_PACKAGE_luci-theme-argonv3=y
-          CONFIG_PACKAGE_luci-theme-atmaterial=y
+          CONFIG_PACKAGE_luci-app-zerotier=yCONFIG_PACKAGE_luci-theme-argon=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
-          CONFIG_PACKAGE_luci-theme-darkmatter=y
-          CONFIG_PACKAGE_luci-theme-edge=y
           CONFIG_PACKAGE_luci-theme-freifunk-generic=y
-          CONFIG_PACKAGE_luci-theme-ifit=y
-          CONFIG_PACKAGE_luci-theme-infinityfreedom=y
           CONFIG_PACKAGE_luci-theme-material=y
-          CONFIG_PACKAGE_luci-theme-netgear=y
-          CONFIG_PACKAGE_luci-theme-netgearv2=y
-          CONFIG_PACKAGE_luci-theme-opentomato=y
-          CONFIG_PACKAGE_luci-theme-opentomcat=y
-          CONFIG_PACKAGE_luci-theme-rosy=y
-          CONFIG_PACKAGE_luci-proto-bonding=y
+          CONFIG_PACKAGE_luci-theme-netgear=yCONFIG_PACKAGE_luci-proto-bonding=y
           CONFIG_PACKAGE_luci-proto-ppp=y
-          CONFIG_PACKAGE_luci-lib-ip=y
+          CONFIG_PACKAGE_luci-proto-wireguard=yCONFIG_PACKAGE_luci-lib-ip=y
           CONFIG_PACKAGE_luci-lib-jsonc=y
           CONFIG_PACKAGE_luci-lib-nixio=y
           CONFIG_PACKAGE_default-settings=y
@@ -1023,9 +1012,15 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-autoreboot-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-docker-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-ipsec-vpnd-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-kodexplorer-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-nft-qos-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-samba-zh-cn=y
@@ -1033,9 +1028,11 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-vsftpd-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-webadmin-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-wireguard-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-wol-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
           CONFIG_POSTFIX_TLS=y
@@ -1043,35 +1040,32 @@ jobs:
           CONFIG_POSTFIX_LDAP=y
           CONFIG_POSTFIX_CDB=y
           CONFIG_POSTFIX_SQLITE=y
-          CONFIG_POSTFIX_PCRE=y
-          CONFIG_PACKAGE_curl=y
-          CONFIG_PACKAGE_vsftpd-alt=y
+          CONFIG_POSTFIX_PCRE=yCONFIG_PACKAGE_vsftpd-alt=y
           CONFIG_VSFTPD_USE_UCI_SCRIPTS=y
           CONFIG_PACKAGE_wget=y
           CONFIG_PACKAGE_iptables=y
+          CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
+          CONFIG_PACKAGE_iptables-mod-extra=y
           CONFIG_PACKAGE_iptables-mod-fullconenat=y
+          CONFIG_PACKAGE_iptables-mod-ipopt=y
           CONFIG_PACKAGE_iptables-mod-ipsec=y
           CONFIG_PACKAGE_iptables-mod-tproxy=y
           CONFIG_PACKAGE_miniupnpd=y
-          CONFIG_PACKAGE_ddns-scripts=y
+          CONFIG_PACKAGE_nftables-nojson=yCONFIG_PACKAGE_ddns-scripts=y
           CONFIG_PACKAGE_ddns-scripts_aliyun=y
           CONFIG_PACKAGE_ddns-scripts_dnspod=y
           CONFIG_PACKAGE_dns2socks=y
           CONFIG_PACKAGE_wsdd2=y
           CONFIG_PACKAGE_UnblockNeteaseMusic=y
           CONFIG_PACKAGE_UnblockNeteaseMusicGo=y
-          CONFIG_UnblockNeteaseMusicGo_INCLUDE_GOPROXY=y
-          CONFIG_OPENLDAP_DEBUG=y
-          CONFIG_PACKAGE_v2ray-plugin=y
-          CONFIG_v2ray-plugin_INCLUDE_GOPROXY=y
-          CONFIG_PACKAGE_xray=y
-          CONFIG_XRAY_EXCLUDE_ASSETS=y
-          CONFIG_XRAY_COMPRESS_UPX=y
-          CONFIG_PACKAGE_ip-full=y
-          CONFIG_PACKAGE_strongswan=y
-          CONFIG_STRONGSWAN_ROUTING_TABLE="220"
-          CONFIG_STRONGSWAN_ROUTING_TABLE_PRIO="220"
-          CONFIG_PACKAGE_strongswan-charon=y
+          CONFIG_UnblockNeteaseMusicGo_INCLUDE_GOPROXY=yCONFIG_OPENLDAP_DEBUG=y
+          CONFIG_PACKAGE_p910nd=yCONFIG_PACKAGE_v2ray=yCONFIG_V2RAY_EXCLUDE_V2CTL=y
+          CONFIG_V2RAY_EXCLUDE_ASSETS=y
+          CONFIG_V2RAY_COMPRESS_UPX=yCONFIG_PACKAGE_v2ray-plugin=y
+          CONFIG_v2ray-plugin_INCLUDE_GOPROXY=yCONFIG_PACKAGE_xray=yCONFIG_XRAY_EXCLUDE_ASSETS=y
+          CONFIG_XRAY_COMPRESS_UPX=yCONFIG_PACKAGE_ip-full=y
+          CONFIG_PACKAGE_mwan3=yCONFIG_PACKAGE_strongswan=yCONFIG_STRONGSWAN_ROUTING_TABLE="220"
+          CONFIG_STRONGSWAN_ROUTING_TABLE_PRIO="220"CONFIG_PACKAGE_strongswan-charon=y
           CONFIG_PACKAGE_strongswan-ipsec=y
           CONFIG_PACKAGE_strongswan-minimal=y
           CONFIG_PACKAGE_strongswan-mod-aes=y
@@ -1090,8 +1084,40 @@ jobs:
           CONFIG_PACKAGE_strongswan-mod-xauth-generic=y
           CONFIG_PACKAGE_strongswan-mod-xcbc=y
           CONFIG_PACKAGE_zerotier=y
+          CONFIG_PACKAGE_frps=y
+          CONFIG_PACKAGE_kcptun-client=y
           CONFIG_PACKAGE_microsocks=y
-          CONFIG_NGINX_NOPCRE=y
+          CONFIG_PACKAGE_naiveproxy=y
+          CONFIG_PACKAGE_nginx=yCONFIG_NGINX_UBUS=y
+          CONFIG_NGINX_HTTP_CHARSET=y
+          CONFIG_NGINX_HTTP_GZIP=y
+          CONFIG_NGINX_HTTP_SSI=y
+          CONFIG_NGINX_HTTP_USERID=y
+          CONFIG_NGINX_HTTP_ACCESS=y
+          CONFIG_NGINX_HTTP_AUTH_BASIC=y
+          CONFIG_NGINX_HTTP_AUTOINDEX=y
+          CONFIG_NGINX_HTTP_GEO=y
+          CONFIG_NGINX_HTTP_MAP=y
+          CONFIG_NGINX_HTTP_SPLIT_CLIENTS=y
+          CONFIG_NGINX_HTTP_REFERER=y
+          CONFIG_NGINX_HTTP_REWRITE=y
+          CONFIG_NGINX_HTTP_PROXY=y
+          CONFIG_NGINX_HTTP_FASTCGI=y
+          CONFIG_NGINX_HTTP_UWSGI=y
+          CONFIG_NGINX_HTTP_SCGI=y
+          CONFIG_NGINX_HTTP_MEMCACHED=y
+          CONFIG_NGINX_HTTP_LIMIT_CONN=y
+          CONFIG_NGINX_HTTP_LIMIT_REQ=y
+          CONFIG_NGINX_HTTP_EMPTY_GIF=y
+          CONFIG_NGINX_HTTP_BROWSER=y
+          CONFIG_NGINX_HTTP_UPSTREAM_HASH=y
+          CONFIG_NGINX_HTTP_UPSTREAM_IP_HASH=y
+          CONFIG_NGINX_HTTP_UPSTREAM_LEAST_CONN=y
+          CONFIG_NGINX_HTTP_UPSTREAM_KEEPALIVE=y
+          CONFIG_NGINX_HTTP_CACHE=y
+          CONFIG_NGINX_PCRE=y
+          CONFIG_NGINX_NAXSI=y
+          CONFIG_NGINX_HEADERS_MORE=yCONFIG_PACKAGE_nginx-util=y
           CONFIG_PACKAGE_pdnsd-alt=y
           CONFIG_PACKAGE_redsocks2=y
           CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
@@ -1125,26 +1151,31 @@ jobs:
           CONFIG_PACKAGE_tcping=y
           CONFIG_PACKAGE_uclient-fetch=y
           CONFIG_PACKAGE_vlmcsd=y
-          CONFIG_PACKAGE_wol=y
+          CONFIG_PACKAGE_wol=yCONFIG_PACKAGE_unzip=y
           CONFIG_PACKAGE_fdisk=y
-          CONFIG_PACKAGE_partx-utils=y
-          CONFIG_PACKAGE_antfs-mount=y
+          CONFIG_PACKAGE_partx-utils=yCONFIG_PACKAGE_antfs-mount=y
+          CONFIG_PACKAGE_btrfs-progs=y
           CONFIG_PACKAGE_e2fsprogs=y
           CONFIG_PACKAGE_mkf2fs=y
           CONFIG_PACKAGE_sysfsutils=y
-          CONFIG_PACKAGE_bash=y
+          CONFIG_PACKAGE_zoneinfo-asia=y
           CONFIG_PACKAGE_bc=y
+          CONFIG_PACKAGE_cgroupfs-mount=y
+          CONFIG_PACKAGE_containerd=y
           CONFIG_PACKAGE_coremark=y
           CONFIG_PACKAGE_coreutils=y
           CONFIG_PACKAGE_coreutils-base64=y
-          CONFIG_PACKAGE_iwinfo=y
+          CONFIG_PACKAGE_docker-ce=yCONFIG_PACKAGE_iwinfo=y
           CONFIG_PACKAGE_jshn=y
           CONFIG_PACKAGE_libjson-script=y
+          CONFIG_PACKAGE_libnetwork=y
           CONFIG_PACKAGE_lm-sensors=y
+          CONFIG_PACKAGE_mount-utils=y
           CONFIG_PACKAGE_openssl-util=y
+          CONFIG_PACKAGE_runc=y
           CONFIG_PACKAGE_shellsync=y
           CONFIG_STRACE_NONE=y
-
+          CONFIG_PACKAGE_tini=y
           EOF
 
           #
